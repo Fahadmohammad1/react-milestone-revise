@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react";
+import Food from "./Food/Food";
+import "./Foods.css";
 
 const Foods = () => {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=a")
+    fetch("https://themealdb.com/api/json/v1/1/search.php?s=a")
       .then((res) => res.json())
-      .then((data) => setFoods(data));
-  }, []);
-  const { meals } = foods;
-  console.log(meals);
+      .then((data) => setFoods(data.meals));
+  }, [foods]);
+
   return (
     <div>
-      <h1>{meals.length}</h1>
+      <div className="card-container">
+        {foods.map((food) => (
+          <Food food={food} key={food.idMeal}></Food>
+        ))}
+      </div>
     </div>
   );
 };
