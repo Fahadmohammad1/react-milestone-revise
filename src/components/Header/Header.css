@@ -1,7 +1,10 @@
 .navbar {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 69px;
   background: lightskyblue;
+  padding: 0px 50px 0px 50px;
 }
 .navbar a {
   text-decoration: none;

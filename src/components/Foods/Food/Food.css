@@ -8,3 +8,14 @@
   border-radius: 7px;
   width: 300px;
 }
+.card-body p {
+  color: gray;
+  padding: 0px 20px 20px 20px;
+  text-align: justify;
+}
+.primary-btn {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 7px;
+  background: lightskyblue;
+}
